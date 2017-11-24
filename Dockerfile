@@ -1,6 +1,5 @@
-FROM frolvlad/alpine-oraclejdk8:slim
-COPY build/libs/example.war app.war
+FROM tomcat:8.0.20-jre8
 
-EXPOSE 8080
+RUN mkdir /usr/local/tomcat/webapps
 
-ENTRYPOINT ["java", "-jar", "app.war"]
+COPY build/libs/example.war /usr/local/tomcat/webapps/example.war
