@@ -1,2 +1,2 @@
 #!/bin/bash
-test "$(curl localhost:8765/)" -eq "index"
+curl localhost:8765/
