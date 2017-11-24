@@ -11,6 +11,12 @@ pipeline {
                 sh "./gradlew build"
             }
         }
+		stage("Information") {
+            steps {
+                sh "cd ./build/libs"
+				sh "ls -l"
+            }
+        }
         stage("Docker build") {
             steps {
                 sh "docker build -t vinczea/devops-pelda ."
