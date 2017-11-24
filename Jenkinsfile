@@ -11,11 +11,6 @@ pipeline {
                 sh "./gradlew build"
             }
         }
-		stage("Information") {
-            steps {
-                sh "cd ./build/libs && ls -l"
-            }
-        }
         stage("Docker build") {
             steps {
                 sh "docker build -t vinczea/devops-pelda ."
@@ -34,6 +29,12 @@ pipeline {
         stage("Deploy to Production") {
             steps {
                 sh "ansible-playbook playbook.yml -i inventory/production"
+            }
+        }
+		stage("Acceptance Test") {
+            steps {
+                sh "sleep 60"
+                sh "./acceptance_test.sh"
             }
         }
     }
