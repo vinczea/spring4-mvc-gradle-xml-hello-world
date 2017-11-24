@@ -1,2 +1,2 @@
 #!/bin/bash
-curl localhost:8765/
+curl --ipv4 localhost:8765/
