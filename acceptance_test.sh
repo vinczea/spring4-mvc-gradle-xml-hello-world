@@ -1,2 +1,2 @@
 #!/bin/bash
-curl hostname:8765/
+curl 172.19.0.3:8765/
