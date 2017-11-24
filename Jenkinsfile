@@ -35,6 +35,7 @@ pipeline {
             steps {
                 sh "sleep 60"
 				sh "docker images"
+				sh "docker ps"
                 sh "./acceptance_test.sh"
             }
         }
