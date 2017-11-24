@@ -13,8 +13,7 @@ pipeline {
         }
 		stage("Information") {
             steps {
-                sh "cd ./build/libs"
-				sh "ls -l"
+                sh "cd ./build/libs && ls -l"
             }
         }
         stage("Docker build") {
