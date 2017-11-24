@@ -1,5 +1,5 @@
 FROM frolvlad/alpine-oraclejdk8:slim
-COPY build/libs/example-0.0.1-SNAPSHOT.war app.war
+COPY build/libs/example.war app.war
 
 EXPOSE 8080
 
