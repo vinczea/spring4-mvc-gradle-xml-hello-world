@@ -34,9 +34,6 @@ pipeline {
 		stage("Acceptance Test") {
             steps {
                 sh "sleep 60"
-				sh "docker images"
-				sh "docker ps"
-				sh "docker-machine ip default"
                 sh "./acceptance_test.sh"
             }
         }
