@@ -1,2 +1,2 @@
 #!/bin/bash
-curl 172.19.0.3:8765/
+curl test $(172.19.0.3:8765/) -eq "index"
